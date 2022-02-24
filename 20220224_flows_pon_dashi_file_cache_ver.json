@@ -1,0 +1,1485 @@
+[
+  {
+    "id": "731a60cf.5bdb7",
+    "type": "tab",
+    "label": "フロー 1",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "59d16c9e.75630c",
+    "type": "ui_group",
+    "z": "",
+    "name": "ポン出し",
+    "tab": "86c26a3f.df27d",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "4e4ac089.133098",
+    "type": "tls-config",
+    "z": "",
+    "name": "",
+    "cert": "",
+    "key": "",
+    "ca": "",
+    "certname": "",
+    "keyname": "",
+    "caname": "",
+    "servername": "",
+    "verifyservercert": false
+  },
+  {
+    "id": "86c26a3f.df27d",
+    "type": "ui_tab",
+    "z": "",
+    "name": "効果音ラボ",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "c4af4916.2e6d3",
+    "type": "ui_base",
+    "theme": {
+      "name": "theme-light",
+      "lightTheme": {
+        "default": "#0094CE",
+        "baseColor": "#0094CE",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": true,
+        "reset": false
+      },
+      "darkTheme": {
+        "default": "#097479",
+        "baseColor": "#097479",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+        "edited": false
+      },
+      "customTheme": {
+        "name": "Untitled Theme 1",
+        "default": "#4B7930",
+        "baseColor": "#4B7930",
+        "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+      },
+      "themeState": {
+        "base-color": {
+          "default": "#0094CE",
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-titlebar-backgroundColor": {
+          "value": "#0094CE",
+          "edited": false
+        },
+        "page-backgroundColor": {
+          "value": "#fafafa",
+          "edited": false
+        },
+        "page-sidebar-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-textColor": {
+          "value": "#1bbfff",
+          "edited": false
+        },
+        "group-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "group-backgroundColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "widget-textColor": {
+          "value": "#111111",
+          "edited": false
+        },
+        "widget-backgroundColor": {
+          "value": "#0094ce",
+          "edited": false
+        },
+        "widget-borderColor": {
+          "value": "#ffffff",
+          "edited": false
+        },
+        "base-font": {
+          "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+        }
+      },
+      "angularTheme": {
+        "primary": "indigo",
+        "accents": "blue",
+        "warn": "red",
+        "background": "grey",
+        "palette": "light"
+      }
+    },
+    "site": {
+      "name": "Node-RED ダッシュボード",
+      "hideToolbar": "false",
+      "allowSwipe": "false",
+      "lockMenu": "false",
+      "allowTempTheme": "true",
+      "dateFormat": "YYYY/MM/DD",
+      "sizes": {
+        "sx": 48,
+        "sy": 48,
+        "gx": 6,
+        "gy": 6,
+        "cx": 6,
+        "cy": 6,
+        "px": 0,
+        "py": 0
+      }
+    }
+  },
+  {
+    "id": "12b6ab9b.727d94",
+    "type": "ui_tab",
+    "z": "",
+    "name": "応援",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  },
+  {
+    "id": "dcaa180b.d4b8d8",
+    "type": "ui_group",
+    "z": "",
+    "name": "応援",
+    "tab": "12b6ab9b.727d94",
+    "order": 1,
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "f49a61a0.818c4",
+    "type": "ui_audio",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "voice": "",
+    "always": "",
+    "x": 680,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "dacd68dc.563488",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "歓声と拍手1",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 310,
+    "y": 820,
+    "wires": [
+      [
+        "d94afb2d.ea6778"
+      ]
+    ]
+  },
+  {
+    "id": "1f89775a.d86231",
+    "type": "comment",
+    "z": "731a60cf.5bdb7",
+    "name": "効果音ラボ・ポン出し画面",
+    "info": "",
+    "x": 130,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "4b5cdc4e.11f424",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "和太鼓でドン",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 320,
+    "y": 700,
+    "wires": [
+      [
+        "4d90faa.f48eb84"
+      ]
+    ]
+  },
+  {
+    "id": "d530116d.4722e8",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 700,
+    "wires": [
+      [
+        "4b5cdc4e.11f424"
+      ]
+    ]
+  },
+  {
+    "id": "70d0f494.90f2dc",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "和太鼓でドドン",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 320,
+    "y": 740,
+    "wires": [
+      [
+        "beb39eb0.17da18"
+      ]
+    ]
+  },
+  {
+    "id": "6b5a4313.070f94",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 740,
+    "wires": [
+      [
+        "70d0f494.90f2dc"
+      ]
+    ]
+  },
+  {
+    "id": "32983d41.f1e6a2",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 780,
+    "wires": [
+      [
+        "388b0c56.fd499c"
+      ]
+    ]
+  },
+  {
+    "id": "388b0c56.fd499c",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "チーン",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 290,
+    "y": 780,
+    "wires": [
+      [
+        "1c8f700f.318cb"
+      ]
+    ]
+  },
+  {
+    "id": "f7748a31.632fc",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 820,
+    "wires": [
+      [
+        "dacd68dc.563488"
+      ]
+    ]
+  },
+  {
+    "id": "93222285.d03398",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "ドンドンパフパフ",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 330,
+    "y": 860,
+    "wires": [
+      [
+        "67b5a602.9978b"
+      ]
+    ]
+  },
+  {
+    "id": "61bf6baf.2b4c1c",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 860,
+    "wires": [
+      [
+        "93222285.d03398"
+      ]
+    ]
+  },
+  {
+    "id": "fe4232c7.a5f808",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "ツッコミを入れる",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 330,
+    "y": 900,
+    "wires": [
+      [
+        "e017a270.471738"
+      ]
+    ]
+  },
+  {
+    "id": "bcf2b387.c46058",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 900,
+    "wires": [
+      [
+        "fe4232c7.a5f808"
+      ]
+    ]
+  },
+  {
+    "id": "2bcd5d9c.1b8be2",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "みんなで大笑い1",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 330,
+    "y": 940,
+    "wires": [
+      [
+        "9a025ac0.f598d"
+      ]
+    ]
+  },
+  {
+    "id": "d6f89eeb.2ba438",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 940,
+    "wires": [
+      [
+        "2bcd5d9c.1b8be2"
+      ]
+    ]
+  },
+  {
+    "id": "be928b95.3b5ac",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "自主規制ピー音",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 320,
+    "y": 980,
+    "wires": [
+      [
+        "8af5428e.6eff"
+      ]
+    ]
+  },
+  {
+    "id": "e3c041fe.096298",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 980,
+    "wires": [
+      [
+        "be928b95.3b5ac"
+      ]
+    ]
+  },
+  {
+    "id": "3c84e441.e93aa4",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "クイズ出題1",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 310,
+    "y": 1020,
+    "wires": [
+      [
+        "160c2994.2f6cfe"
+      ]
+    ]
+  },
+  {
+    "id": "3878a9a4.72dec6",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 1020,
+    "wires": [
+      [
+        "3c84e441.e93aa4"
+      ]
+    ]
+  },
+  {
+    "id": "cfd3c720.c97ca",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "クイズ正解1",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 310,
+    "y": 1060,
+    "wires": [
+      [
+        "927536d0.f6e7f"
+      ]
+    ]
+  },
+  {
+    "id": "653a0864.8b46b8",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 1060,
+    "wires": [
+      [
+        "cfd3c720.c97ca"
+      ]
+    ]
+  },
+  {
+    "id": "5cc60925.944ea8",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "59d16c9e.75630c",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "クイズ不正解1",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 320,
+    "y": 1100,
+    "wires": [
+      [
+        "ac085499.f02b88"
+      ]
+    ]
+  },
+  {
+    "id": "16664639.692f2a",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 1100,
+    "wires": [
+      [
+        "5cc60925.944ea8"
+      ]
+    ]
+  },
+  {
+    "id": "9c074fae.2da1a8",
+    "type": "comment",
+    "z": "731a60cf.5bdb7",
+    "name": "効果音ラボ・音源データ取得",
+    "info": "",
+    "x": 140,
+    "y": 40,
+    "wires": []
+  },
+  {
+    "id": "4d90faa.f48eb84",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "1.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 700,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "1d7cd8a7.ff6ff7",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "1.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 80,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "3fad5b59.83141c",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/drum-japanese1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 80,
+    "wires": [
+      [
+        "1d7cd8a7.ff6ff7"
+      ]
+    ]
+  },
+  {
+    "id": "cba36173.5bd1a8",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/drum-japanese2.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 120,
+    "wires": [
+      [
+        "559ea468.8ad0fc"
+      ]
+    ]
+  },
+  {
+    "id": "2763ca95.f3426e",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/tin1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 160,
+    "wires": [
+      [
+        "aa3732cb.24075"
+      ]
+    ]
+  },
+  {
+    "id": "10f84730.6bcdb1",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/voice/mp3/people/people-performance-cheer1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 200,
+    "wires": [
+      [
+        "2dc3a0bf.41ad1"
+      ]
+    ]
+  },
+  {
+    "id": "1b7296f2.459f81",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/dondonpafupafu1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 240,
+    "wires": [
+      [
+        "59d4654d.4d38a4"
+      ]
+    ]
+  },
+  {
+    "id": "750900c0.bdf658",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/feed1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 280,
+    "wires": [
+      [
+        "354d5eff.0e2b22"
+      ]
+    ]
+  },
+  {
+    "id": "f1c9748e.ea83e8",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/voice/mp3/people/people-studio-laugh-large1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 320,
+    "wires": [
+      [
+        "6dbffc79.18e284"
+      ]
+    ]
+  },
+  {
+    "id": "1cc5779b.cf26",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/self-regulation1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 360,
+    "wires": [
+      [
+        "aa8a6726.3ec3e"
+      ]
+    ]
+  },
+  {
+    "id": "7254c651.1938f8",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/question1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 400,
+    "wires": [
+      [
+        "adc02dd5.d1d4e8"
+      ]
+    ]
+  },
+  {
+    "id": "7094def6.fa8148",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/correct1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 440,
+    "wires": [
+      [
+        "8dd8f37f.859598"
+      ]
+    ]
+  },
+  {
+    "id": "b6dcf1ab.5d3e1",
+    "type": "http request",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "method": "GET",
+    "ret": "bin",
+    "paytoqs": false,
+    "url": "https://soundeffect-lab.info/sound/anime/mp3/incorrect1.mp3",
+    "tls": "4e4ac089.133098",
+    "persist": false,
+    "proxy": "",
+    "authType": "",
+    "x": 310,
+    "y": 480,
+    "wires": [
+      [
+        "48e4c434.ff9684"
+      ]
+    ]
+  },
+  {
+    "id": "1a26ffde.2edb98",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": "5",
+    "x": 120,
+    "y": 80,
+    "wires": [
+      [
+        "3fad5b59.83141c",
+        "cba36173.5bd1a8",
+        "2763ca95.f3426e",
+        "10f84730.6bcdb1",
+        "1b7296f2.459f81",
+        "750900c0.bdf658",
+        "f1c9748e.ea83e8",
+        "1cc5779b.cf26",
+        "7254c651.1938f8",
+        "7094def6.fa8148",
+        "b6dcf1ab.5d3e1"
+      ]
+    ]
+  },
+  {
+    "id": "559ea468.8ad0fc",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "2.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 120,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "aa3732cb.24075",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "3.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 160,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "2dc3a0bf.41ad1",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "4.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 200,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "59d4654d.4d38a4",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "5.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 240,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "354d5eff.0e2b22",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "6.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 280,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "6dbffc79.18e284",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "7.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 320,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "aa8a6726.3ec3e",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "8.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 360,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "adc02dd5.d1d4e8",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "9.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 470,
+    "y": 400,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "8dd8f37f.859598",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "10.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 480,
+    "y": 440,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "48e4c434.ff9684",
+    "type": "file",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "11.mp3",
+    "appendNewline": true,
+    "createDir": false,
+    "overwriteFile": "true",
+    "encoding": "none",
+    "x": 480,
+    "y": 480,
+    "wires": [
+      [
+        "c848376d.e95338"
+      ]
+    ]
+  },
+  {
+    "id": "c848376d.e95338",
+    "type": "debug",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "x": 640,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "beb39eb0.17da18",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "2.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 740,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "1c8f700f.318cb",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "3.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 780,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "d94afb2d.ea6778",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "4.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 820,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "ac085499.f02b88",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "11.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 500,
+    "y": 1100,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "67b5a602.9978b",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "5.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 860,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "e017a270.471738",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "6.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 900,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "9a025ac0.f598d",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "7.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 940,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "8af5428e.6eff",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "8.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 980,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "160c2994.2f6cfe",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "9.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 490,
+    "y": 1020,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "927536d0.f6e7f",
+    "type": "file in",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "filename": "10.mp3",
+    "format": "",
+    "chunk": false,
+    "sendError": false,
+    "encoding": "none",
+    "x": 500,
+    "y": 1060,
+    "wires": [
+      [
+        "f49a61a0.818c4"
+      ]
+    ]
+  },
+  {
+    "id": "df4aed75.569aa",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "dcaa180b.d4b8d8",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "いいね！",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 300,
+    "y": 560,
+    "wires": [
+      [
+        "d94afb2d.ea6778"
+      ]
+    ]
+  },
+  {
+    "id": "6dc9a67f.251718",
+    "type": "comment",
+    "z": "731a60cf.5bdb7",
+    "name": "効果音ラボ・応援画面",
+    "info": "",
+    "x": 120,
+    "y": 520,
+    "wires": []
+  },
+  {
+    "id": "b575841c.aa0d6",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 560,
+    "wires": [
+      [
+        "df4aed75.569aa"
+      ]
+    ]
+  },
+  {
+    "id": "bf9e0a7a.6004e8",
+    "type": "ui_button",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "group": "dcaa180b.d4b8d8",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "label": "（笑",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "",
+    "payloadType": "str",
+    "topic": "topic",
+    "topicType": "msg",
+    "x": 290,
+    "y": 600,
+    "wires": [
+      [
+        "9a025ac0.f598d"
+      ]
+    ]
+  },
+  {
+    "id": "70557f3f.06f6b",
+    "type": "inject",
+    "z": "731a60cf.5bdb7",
+    "name": "",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "x": 120,
+    "y": 600,
+    "wires": [
+      [
+        "bf9e0a7a.6004e8"
+      ]
+    ]
+  }
+]
