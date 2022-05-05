@@ -187,10 +187,10 @@
         "repeat": "10",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "10",
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "payload": " ",
+        "payloadType": "str",
         "x": 290,
         "y": 300,
         "wires": [
