@@ -1,0 +1,228 @@
+[
+    {
+        "id": "9388d6c28f63fe59",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6da23da5ddf78d33",
+        "type": "http in",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "url": "/chat",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 360,
+        "wires": [
+            [
+                "ef35930522572ac2"
+            ]
+        ]
+    },
+    {
+        "id": "a2b0691a304e67f7",
+        "type": "http response",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ef35930522572ac2",
+        "type": "template",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html lang=\"ja\">\n<body>\n  <ul id=\"chat\">\n    <li v-for=\"m in messages\">{{ m }}</li>\n  </ul>\n  <input type=\"text\" name=\"say\" id=\"say\" placeholder=\"Input a message here...\">\n  <button id=\"send\">Send</button>\n\n  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js\" type=\"text/javascript\"></script>\n  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.js\" type=\"text/javascript\"></script>\n\n  <script type=\"text/javascript\">\n    var data = {\n      messages: []\n    };\n\n    new Vue({\n      el: '#chat',\n      data: data\n    });\n\n    document.getElementById('send').addEventListener('click', function (e) {\n      var say = document.getElementById('say')\n      send(say.value);\n      say.value = '';\n    });\n\n    var host = \"HOSTNAME\";  // ホスト名を設定する\n    var clientId = Math.random().toString(36).substring(7);\n    var client = new Paho.Client(host, 443, \"/mqtt\", clientId);  // 接続するポート番号を設定する\n                                                                 // WebSocketのパスを設定する\n    var connectOptions = {\n      useSSL: true,  // SSLを無効にする場合はfalseを設定する\n      timeout: 3,\n      mqttVersion: 4,\n      onSuccess: subscribe,\n      onFailure: fail,\n      keepAliveInterval: 30,\n      reconnect: true  // socketが切れた場合に自動で再接続するオプションを有効にする\n    };\n    client.connect(connectOptions);\n    client.onMessageArrived = onMessage;\n    client.onConnectionLost = function(e) {\n      console.log(e);\n    };\n\n    function subscribe() {\n      client.subscribe(\"Test/chat\");\n      console.log(\"subscribed\");\n    }\n\n    function fail() {\n      console.log(\"conn failed\");\n    }\n\n    function send(content) {\n      var message = new Paho.Message(content);\n      message.destinationName = \"Test/chat\";\n      client.send(message);\n      console.log(\"sent\");\n    }\n\n    function onMessage(message) {\n      data.messages.push(message.payloadString);\n      console.log(\"message received: \" + message.payloadString);\n    }\n  </script>\n</body>\n</html>",
+        "output": "str",
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "a2b0691a304e67f7"
+            ]
+        ]
+    },
+    {
+        "id": "bf95f177937156c1",
+        "type": "aedes broker",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": null,
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "8c544d015a5a675e"
+            ],
+            [
+                "3a8e92998cd5ebdc"
+            ]
+        ]
+    },
+    {
+        "id": "8c544d015a5a675e",
+        "type": "debug",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3a8e92998cd5ebdc",
+        "type": "debug",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "510904e334e4e322",
+        "type": "mqtt in",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "topic": "Test/chat",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "67d8454a49548bf9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 240,
+        "wires": [
+            [
+                "5741d369dc121b82"
+            ]
+        ]
+    },
+    {
+        "id": "5741d369dc121b82",
+        "type": "debug",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "cf9214db405fc95a",
+        "type": "mqtt out",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "topic": "Test/chat",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "67d8454a49548bf9",
+        "x": 500,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "eb316589f8b8935f",
+        "type": "inject",
+        "z": "9388d6c28f63fe59",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 290,
+        "y": 300,
+        "wires": [
+            [
+                "cf9214db405fc95a"
+            ]
+        ]
+    },
+    {
+        "id": "67d8454a49548bf9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]
