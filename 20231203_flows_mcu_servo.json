@@ -1,0 +1,425 @@
+[
+    {
+        "id": "bb7df5b4d2b46116",
+        "type": "tab",
+        "label": "フロー 2",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": false
+        }
+    },
+    {
+        "id": "28026917ef184ceb",
+        "type": "mcu_pwm_out",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "pin": "32",
+        "hz": "50",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 450,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "de78d2d7ce1eb9e4",
+        "type": "inject",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.12",
+        "payloadType": "num",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "82d2925a8475c13e",
+                "28026917ef184ceb"
+            ]
+        ]
+    },
+    {
+        "id": "532d5ed13e5c452b",
+        "type": "inject",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.0725",
+        "payloadType": "num",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "82d2925a8475c13e",
+                "28026917ef184ceb"
+            ]
+        ]
+    },
+    {
+        "id": "82d2925a8475c13e",
+        "type": "debug",
+        "z": "bb7df5b4d2b46116",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 440,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "04b37844484f195b",
+        "type": "inject",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.025",
+        "payloadType": "num",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "28026917ef184ceb",
+                "82d2925a8475c13e"
+            ]
+        ]
+    },
+    {
+        "id": "919a309ed83bf478",
+        "type": "ui_slider",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "71356bd2c97dd383",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "10",
+        "step": "1",
+        "className": "",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "82d2925a8475c13e",
+                "067c1f5099e6709a"
+            ]
+        ]
+    },
+    {
+        "id": "067c1f5099e6709a",
+        "type": "range",
+        "z": "bb7df5b4d2b46116",
+        "minin": "0",
+        "maxin": "10",
+        "minout": "0.025",
+        "maxout": "0.0725",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "28026917ef184ceb",
+                "82d2925a8475c13e"
+            ]
+        ]
+    },
+    {
+        "id": "9283db4509e668f8",
+        "type": "ui_slider",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "684a659de4944025",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "10",
+        "step": "1",
+        "className": "",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 360,
+        "wires": [
+            [
+                "dc5c9362bc5b4dc1",
+                "e969861035c03ae8"
+            ]
+        ]
+    },
+    {
+        "id": "dc5c9362bc5b4dc1",
+        "type": "range",
+        "z": "bb7df5b4d2b46116",
+        "minin": "0",
+        "maxin": "10",
+        "minout": "0.025",
+        "maxout": "0.0725",
+        "action": "scale",
+        "round": false,
+        "property": "payload",
+        "name": "",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 340,
+        "y": 360,
+        "wires": [
+            [
+                "cf8718a4b83507ab",
+                "e969861035c03ae8"
+            ]
+        ]
+    },
+    {
+        "id": "cf8718a4b83507ab",
+        "type": "mcu_pwm_out",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "pin": "33",
+        "hz": "50",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 450,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "dac7e70c4e8dca87",
+        "type": "inject",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.12",
+        "payloadType": "num",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 560,
+        "wires": [
+            [
+                "cf8718a4b83507ab"
+            ]
+        ]
+    },
+    {
+        "id": "cb4b7a5245aed389",
+        "type": "inject",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.0725",
+        "payloadType": "num",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "cf8718a4b83507ab"
+            ]
+        ]
+    },
+    {
+        "id": "f6a731bba9a7908e",
+        "type": "inject",
+        "z": "bb7df5b4d2b46116",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0.025",
+        "payloadType": "num",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 130,
+        "y": 440,
+        "wires": [
+            [
+                "cf8718a4b83507ab"
+            ]
+        ]
+    },
+    {
+        "id": "e969861035c03ae8",
+        "type": "debug",
+        "z": "bb7df5b4d2b46116",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": false
+        },
+        "x": 440,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "71356bd2c97dd383",
+        "type": "ui_group",
+        "name": "BAR-A",
+        "tab": "6b50a25548b3688c",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": "",
+        "_mcu": {
+            "mcu": false
+        }
+    },
+    {
+        "id": "684a659de4944025",
+        "type": "ui_group",
+        "name": "BAR-B",
+        "tab": "6b50a25548b3688c",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": "",
+        "_mcu": {
+            "mcu": false
+        }
+    },
+    {
+        "id": "6b50a25548b3688c",
+        "type": "ui_tab",
+        "name": "HOME",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false,
+        "_mcu": {
+            "mcu": false
+        }
+    }
+]
