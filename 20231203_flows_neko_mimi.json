@@ -1,0 +1,244 @@
+[
+    {
+        "id": "b2980ffae16e31cb",
+        "type": "tab",
+        "label": "フロー 3",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "745e35dcb1b1886b",
+        "type": "inject",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "red,green,blue,white,cyan,yellow,purple,orange",
+        "payloadType": "str",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "5d799e649b54a1a3"
+            ]
+        ]
+    },
+    {
+        "id": "2420e7cde0ed735b",
+        "type": "debug",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 530,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0d1014c10414c0e3",
+        "type": "complete",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "scope": [
+            "779bd1b531c30b80"
+        ],
+        "uncaught": false,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "5d799e649b54a1a3"
+            ]
+        ]
+    },
+    {
+        "id": "5d799e649b54a1a3",
+        "type": "function",
+        "z": "b2980ffae16e31cb",
+        "name": "random color",
+        "func": "const colors = context.get(\"colors\")\n\ndo {\n    msg.payload = [flow.get(\"num\"), colors[Math.trunc(Math.random() * colors.length)]];\n} while (context.get(\"previous\") === msg.payload);\n\ncontext.set(\"previous\", msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "const colors = [\"red\",\"green\",\"blue\",\"white\",\"cyan\",\"yellow\",\"purple\",\"orange\",\"black\",\"pink\"]\ncontext.set(\"colors\", colors);\n\nflow.set(\"num\", 70);",
+        "finalize": "",
+        "libs": [],
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "2420e7cde0ed735b",
+                "779bd1b531c30b80"
+            ]
+        ]
+    },
+    {
+        "id": "779bd1b531c30b80",
+        "type": "mcu_neopixels",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "pin": "32",
+        "length": "70",
+        "order": "GRB",
+        "mode": "2",
+        "background": "#000000",
+        "foreground": "#ff2600",
+        "wipe": "",
+        "brightness": "20",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 530,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e6fd8e10397b1a2f",
+        "type": "mcu_digital_in",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "pin": "33",
+        "mode": "InputPullUp",
+        "edge": "2",
+        "debounce": 0,
+        "initial": false,
+        "invert": false,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "833d46c62866b28a"
+            ]
+        ]
+    },
+    {
+        "id": "833d46c62866b28a",
+        "type": "change",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "num",
+                "pt": "flow",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "779bd1b531c30b80",
+                "2420e7cde0ed735b"
+            ]
+        ]
+    },
+    {
+        "id": "3385a19bb5e83b65",
+        "type": "mcu_digital_in",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "pin": "37",
+        "mode": "InputPullUp",
+        "edge": "2",
+        "debounce": 0,
+        "initial": false,
+        "invert": false,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 250,
+        "y": 300,
+        "wires": [
+            [
+                "dacc0e3072bfc3bf"
+            ]
+        ]
+    },
+    {
+        "id": "dacc0e3072bfc3bf",
+        "type": "change",
+        "z": "b2980ffae16e31cb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "num",
+                "pt": "flow",
+                "to": "70",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "70",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "779bd1b531c30b80",
+                "2420e7cde0ed735b"
+            ]
+        ]
+    }
+]
